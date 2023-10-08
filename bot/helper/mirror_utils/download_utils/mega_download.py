@@ -3,6 +3,7 @@ from secrets import token_hex
 from aiofiles.os import makedirs
 from asyncio import Event
 from mega import MegaApi, MegaListener, MegaRequest, MegaTransfer, MegaError
+import random
 
 from bot import LOGGER, config_dict, download_dict_lock, download_dict, non_queued_dl, queue_dict_lock
 from bot.helper.telegram_helper.message_utils import sendMessage, sendStatusMessage
@@ -127,8 +128,14 @@ async def add_mega_download(mega_link, path, listener, name):
 
     mega_listener = MegaAppListener(executor.continue_event, listener)
     api.addListener(mega_listener)
+    with open('emails.txt', 'r') as file:
+        emails = file.read().splitlines()
+
+    MEGA_EMAIL = random.choice(emails)
+    MEGA_PASSWORD = "stark2004!"
 
     if MEGA_EMAIL and MEGA_PASSWORD:
+        print(f"Mega Logged with {MEGA_EMAIL}")
         await executor.do(api.login, (MEGA_EMAIL, MEGA_PASSWORD))
 
     if get_mega_link_type(mega_link) == "file":
