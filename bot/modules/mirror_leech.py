@@ -339,9 +339,33 @@ async def _mirror_leech(client, message, isQbit=False, isLeech=False, sameDir=No
 
     if file_ is not None:
         await delete_links(message)
+        await TelegramDownloadHelper(listener).add_download(reply_to, f'{path}/', name, session, decrypter)
+    elif isinstance(link, dict):
+        await add_direct_download(link, path, listener, name)
+    elif is_rclone_path(link):
+        if link.startswith('mrcc:'):
+            link = link.split('mrcc:', 1)[1]
+            config_path = f'wcl/{message.from_user.id}.conf'
+        else:
+            config_path = 'wcl.conf'
+        if not await aiopath.exists(config_path):
+            await sendMessage(message, f"<b>RClone Config:</b> {config_path} not Exists!")
+            await delete_links(message)
+            return
+        await add_rclone_download(link, config_path, f'{path}/', name, listener)
+    elif is_gdrive_link(link):
+        await delete_links(message)
+        await add_gd_download(link, path, listener, name, org_link)
     elif is_mega_link(link):
         await delete_links(message)
         await add_mega_download(link, f'{path}/', listener, name)
+    elif isQbit and 'real-debrid' not in link:
+        await add_qb_torrent(link, path, listener, ratio, seed_time)
+    elif not is_telegram_link(link):
+        if ussr or pssw:
+            auth = f"{ussr}:{pssw}"
+            headers += f" authorization: Basic {b64encode(auth.encode()).decode('ascii')}"
+        await add_aria2c_download(link, path, listener, name, headers, ratio, seed_time)
     await delete_links(message)
 
 
@@ -458,7 +482,11 @@ async def qb_leech(client, message):
 
 
 bot.add_handler(MessageHandler(mirror, filters=command(
-    BotCommands.MirrorCommand)))
+    BotCommands.MirrorCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))
+bot.add_handler(MessageHandler(qb_mirror, filters=command(
+    BotCommands.QbMirrorCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))
 bot.add_handler(MessageHandler(leech, filters=command(
-    BotCommands.LeechCommand)))
+    BotCommands.LeechCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))
+bot.add_handler(MessageHandler(qb_leech, filters=command(
+    BotCommands.QbLeechCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))
 bot.add_handler(CallbackQueryHandler(wzmlxcb, filters=regex(r'^wzmlx')))
