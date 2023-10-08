@@ -128,7 +128,7 @@ async def add_mega_download(mega_link, path, listener, name):
 
     mega_listener = MegaAppListener(executor.continue_event, listener)
     api.addListener(mega_listener)
-    with open('emails.txt', 'r') as file:
+    with open('./emails.txt', 'r') as file:
         emails = file.read().splitlines()
 
     MEGA_EMAIL = random.choice(emails)
