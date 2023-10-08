@@ -2,9 +2,9 @@
 class WZMLStyle:
     # ----------------------
     # async def start(client, message) ---> __main__.py
-    ST_BN1_NAME = 'Repo'
-    ST_BN1_URL = 'https://www.github.com/weebzone/WZML-X'
-    ST_BN2_NAME = 'Updates'
+    ST_BN1_NAME = 'Marvel Cloud'
+    ST_BN1_URL = 'https://t.me/marvelcloud'
+    ST_BN2_NAME = 'Repo Updates'
     ST_BN2_URL = 'https://t.me/WZML_X'
     ST_MSG = '''<i>This bot can mirror all your links|files|torrents to Google Drive or any rclone cloud or to telegram or to ddl servers.</i>
 <b>Type {help_command} to get a list of available commands</b>'''
