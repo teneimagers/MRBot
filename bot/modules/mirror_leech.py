@@ -458,7 +458,7 @@ async def qb_leech(client, message):
 
 
 bot.add_handler(MessageHandler(mirror, filters=command(
-    BotCommands.MirrorCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))
+    BotCommands.MirrorCommand)))
 bot.add_handler(MessageHandler(leech, filters=command(
-    BotCommands.LeechCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))
+    BotCommands.LeechCommand)))
 bot.add_handler(CallbackQueryHandler(wzmlxcb, filters=regex(r'^wzmlx')))
