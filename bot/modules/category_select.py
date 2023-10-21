@@ -142,6 +142,6 @@ async def confirm_dump(client, query):
     await editMessage(query.message, f"<b>Select the category where you want to upload</b>\n\n<i><b>Upload Category:</b></i> <code>{cat_name}</code>\n\n<b>Timeout:</b> 60 sec", buttons.build_menu(3))
 
 
-bot.add_handler(MessageHandler(change_category, filters=command(BotCommands.CategorySelect) & CustomFilters.authorized))
+bot.add_handler(MessageHandler(change_category, filters=command(BotCommands.CategorySelect)))
 bot.add_handler(CallbackQueryHandler(confirm_category, filters=regex("^scat")))
 bot.add_handler(CallbackQueryHandler(confirm_dump, filters=regex("^dcat")))
