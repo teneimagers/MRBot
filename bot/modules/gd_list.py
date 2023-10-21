@@ -75,5 +75,5 @@ async def drive_list(_, message):
     await sendMessage(message, '<b>Choose drive list options:</b>', buttons, 'IMAGES')
 
 bot.add_handler(MessageHandler(drive_list, filters=command(
-    BotCommands.ListCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))
+    BotCommands.ListCommand)))
 bot.add_handler(CallbackQueryHandler(select_type, filters=regex("^list_types")))
