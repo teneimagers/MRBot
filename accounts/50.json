@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "marvel-cloud-403615",
+  "private_key_id": "90c4bfe495ebf79a00f1aee8de2e84f3a216c04b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0+xMFIIkgna2U\ncWJpNZ39KaU7TIvonaodIvqaOGed4mtsf1pRxONetJ5yhqX2MHjKXzOtOA2QA4PS\nkoX21A3p9jH80YzxbpTi0voowdzNj0OFjxcX5fUQlsuXaHYEbL8+xghXRqryx0Uc\nKCKtIc5Q/8fLLlBfIcegMSC0YnPtVIVfPh7uuEEtkS1QkgTZgqHxrimZUx3E5hUC\nLBNpG3k/BqsW3ZHJsMHaZ7XJsYr0kiSMOWT4Ofi+QwhGrb587TmUa4x5J5pMe/4e\nvG0C0booQHMSoMlemkgnSGPpmA/vL+IfNWgLN3EwiXxKrZGPJJBKogN3o/aKsXCz\nrzyBqBCVAgMBAAECggEAVZgfhT+/ixz38Op1PEQe/hJ5sqN/0hrrT09xTYoau2nQ\nG6bZvS2MyYhMHec/y8FeB3xiMOz/QRrgeDFTSYs+L2aAes1SxwbhRKu6o5cYimHU\n8fBcYDGip19iV7AQjQQvqQ04+aoTBLKpJWl4CQEhll56jEZRvcR4qPNDP/0GTfps\no32vqXmX+bYyPQz3hqQRo4rVHzYr0Ukhax6KT9KNeBYoAa676ZZHm8R2jSqlE048\nYRBeI8LPZBi5RF/OJ5CxwY7wNbkTTSDyCJPzBerZ+lIrX5CtNwVEN8D3JfUfcH5O\nypAwt/rW7chKJaC32lGgrZPKx+27qwrB4w0diaVbOwKBgQDqoEPYUmirVAkG5AzD\nMWxy5ZZ5WYmDR9oAK5M29MC6feh1OPgg9P2Aua4xZUyErfOhH3xKn5xKl1qPwOCo\nZVEWqXcMRtUFLgjNftfHJU2XL9ooFkZe3PnDg2On5qFZjm5ItnXQXUliLZemZ/Cj\n3NgZgaSEYmZhiddvBW242pbiWwKBgQDFd74xSscG7+rKd6ThbEKIoWMgkhax+Evm\nJ6Q33GS2LynUlyuRwgUyc2MNa6gzARo/fWZTRaYh48rYj4FR2E3Me4YMI+QsJnjH\ntgpfCxAaYzP50vx7KvRX8vygCcAnDuFP/l+VoTS/DXT36RDSdyNDP++uCghZrL1n\nwzwDSxFrzwKBgHxU6z7yBKdtw87UAHNbeHW2djPeH8HizII0lTGVJ6Br4khkJREJ\n4mBZhRaF8LOKnsUuMyY0SJU6eXIeKq7x6bORoBVwX6f8CgwjgGL2wJQydm+xxh61\nCOHzeVbbH3uev5BmqC3/kUimkmtLPzkGabmyeqTwpAJiEjix7r/7jeNrAoGBAKTW\nDyLwi/FjhrgaZb1y9Js/NRM0P9OyNBFc1/11cXCPMDjxNAKJVnNF1NKYIqDo87M6\nB5fNlR/HGkXqjQX4LQFbv4sUztx4BOyZLlEmV/vfAb0yfWaHdc6Q3IbvfMJd7oEr\nEzlBh1lQb2qe2FcH8pypm3bJkyzgQH+Efu001ccLAoGAN30eBm7QNvLZBhKdWK4m\ncDFzWf+nL+8eoEdBWn7ZzKiqI51lngL52akydO8s/aga+7Grgejtdf7AQRAJVlve\nNBV7AvSfYgAc6W6PeQK6hEvfkMyJHxdBZdrAsfv9rm3kiHKIFKnYOGpmIt2aAiyx\nZKhlvN1NGiEm2yN1Hgnj85A=\n-----END PRIVATE KEY-----\n",
+  "client_email": "mfc-0mynv6pwikfxnqankk5sdh6iw3@marvel-cloud-403615.iam.gserviceaccount.com",
+  "client_id": "111892219469988685159",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mfc-0mynv6pwikfxnqankk5sdh6iw3%40marvel-cloud-403615.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
